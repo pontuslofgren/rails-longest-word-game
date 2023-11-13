@@ -14,7 +14,7 @@ class GamesController < ApplicationController
     @valid_letters = used_letters_in_letters?(@used_letters, @allowed_letters)
     @valid_word = is_valid_word?(@used_letters.join)
     @message = ""
-    @message = "#{@used_letters.join} is not a valid English word}" unless @valid_word
+    @message = "#{@used_letters.join} is not a valid English word" unless @valid_word
     @message = "#{@used_letters.join} cant be built out of #{@allowed_letters}" unless @valid_letters
     @message = "Congratulations! #{@used_letters.join} is a valid English word!" if @valid_letters && @valid_word
   end
